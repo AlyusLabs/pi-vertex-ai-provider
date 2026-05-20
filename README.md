@@ -32,23 +32,56 @@ set PI_VERTEX_AI_LOCATION=global
 
 ## Use with Pi
 
-Install from npm:
+### 1. Installation (For End-Users)
 
+To use this provider across your projects, install it using one of the following methods.
+
+#### Global Installation (Recommended)
+This makes the Vertex AI provider available globally in all projects:
 ```bash
+# From npm
 pi install npm:pi-vertex-ai-provider
-```
 
-Or from GitHub:
-
-```bash
+# Directly from GitHub (always latest)
 pi install git:github.com/AlyusLabs/pi-vertex-ai-provider
 ```
 
-For local development from this repo:
-
+#### Project-Local Installation
+If you only want this provider enabled in a specific project, run this inside that project's directory:
 ```bash
+pi install -l git:github.com/AlyusLabs/pi-vertex-ai-provider
+```
+
+Once installed, simply run `pi` normally:
+```bash
+pi
+```
+
+---
+
+### 2. Local Development & Testing (For Developers)
+
+If you are making changes to this extension and want to test it on the fly, use the temporary extension flag (`-e`).
+
+> ⚠️ **Important UX Note:** The `.` in `pi -e .` refers to the *current working directory*. 
+
+#### Option A: Running from inside this repository
+If you are currently inside this repository's directory, run:
+```bash
+cd pi-vertex-ai-provider
 pi -e .
 ```
+
+#### Option B: Testing from another project directory
+If you are inside another project directory (e.g., your game folder) and want to test your local copy of this provider, you must specify the **absolute path** to this repository instead of `.`:
+```bash
+cd C:\Users\Yusuf\Desktop\My-Game-Project
+pi -e C:\Users\Yusuf\Documents\pi-vertex-ai-provider
+```
+
+---
+
+### 3. Selecting the Vertex Models
 
 Then select a Vertex model such as:
 
