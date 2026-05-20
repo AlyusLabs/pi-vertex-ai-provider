@@ -1,0 +1,52 @@
+{
+  "name": "pi-vertex-ai-provider",
+  "version": "0.1.0",
+  "description": "Pi package that enables Google Vertex AI ADC auth and adds latest Gemini Vertex models.",
+  "type": "module",
+  "license": "MIT",
+  "author": "AlyusLabs <alyuslabs@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlyusLabs/pi-vertex-ai-provider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlyusLabs/pi-vertex-ai-provider/issues"
+  },
+  "homepage": "https://github.com/AlyusLabs/pi-vertex-ai-provider#readme",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "vertex-ai",
+    "gemini",
+    "google-cloud",
+    "adc",
+    "gcloud"
+  ],
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "echo \"Pi loads TypeScript extensions directly; no build required.\"",
+    "prepublishOnly": "npm run check"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "typescript": "^5.8.0"
+  }
+}
