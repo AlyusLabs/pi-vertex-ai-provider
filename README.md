@@ -1,5 +1,9 @@
 # pi-vertex-ai-provider
 
+<p align="center">
+  <img src="banner.svg" alt="Pi Vertex AI Provider Banner" width="800">
+</p>
+
 Pi package/extension that makes Pi's built-in `google-vertex` provider use **Vertex AI Application Default Credentials (ADC)** instead of an API key, plus registers `gemini-3.5-flash` until Pi ships it built-in.
 
 ## Why extension, not a new provider?
